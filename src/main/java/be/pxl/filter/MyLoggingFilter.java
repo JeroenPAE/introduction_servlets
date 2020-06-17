@@ -18,16 +18,16 @@ public class MyLoggingFilter implements Filter {
 	private static final Logger LOGGER = LogManager.getLogger(MyLoggingFilter.class);
 
 	@Override
-	public void doFilter(ServletRequest request,
-	                     ServletResponse response, FilterChain chain)
-			throws IOException, ServletException {
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		String url = request instanceof HttpServletRequest ?
 				((HttpServletRequest) request).getRequestURL().toString() : "N/A";
 		LOGGER.warn("from filter, processing url: " + url);
 		String capital = request.getParameter("capital");
 		if (capital == null) {
+			//http://localhost:8082/Servlets/SearchCountry
 			LOGGER.fatal("No capital given...");
 		} else {
+			//http://localhost:8082/Servlets/SearchCountry?capital=Riga
 			chain.doFilter(request, response);
 		}
 	}

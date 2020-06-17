@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Addition", value = "/Addition")
 public class AdditionServlet extends HttpServlet {
 
+	//http://localhost:8082/Servlets/addition.html
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		StringBuilder answer = new StringBuilder();

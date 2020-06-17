@@ -20,6 +20,7 @@ public class FirstServlet extends HttpServlet {
 		text = getInitParameter("text");
 	}
 
+	//http://localhost:8082/Servlets/FirstServlet
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		resp.setContentType("text/html");

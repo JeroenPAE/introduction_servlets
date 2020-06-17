@@ -15,6 +15,9 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "SearchCountry", value = "/SearchCountry")
 public class SearchCountryServlet extends HttpServlet {
+
+	//http://localhost:8082/Servlets/SearchCountry?capital=Riga
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		Client client = ClientBuilder.newClient();

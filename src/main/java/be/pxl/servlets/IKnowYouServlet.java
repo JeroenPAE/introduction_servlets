@@ -13,6 +13,9 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "IKnowYou", value = "/IKnowYou")
 public class IKnowYouServlet extends HttpServlet {
 
+	//sessions
+
+	//localhost:8082/Servlets/IKnowYou
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		if (req.getParameter("name") != null && req.getParameter("name").equals("Error")) {

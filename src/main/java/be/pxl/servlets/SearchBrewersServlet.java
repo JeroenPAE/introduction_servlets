@@ -19,7 +19,8 @@ import java.util.List;
 public class SearchBrewersServlet extends HttpServlet {
 	private BrewerDao brewerDao;
 	private EntityManager entityManager;
-	
+
+	// nodig voor aan de database te kunnen
 	@Override
 	public void init() throws ServletException {
 		// TODO Auto-generated method stub
@@ -29,6 +30,7 @@ public class SearchBrewersServlet extends HttpServlet {
 		brewerDao = new BrewerDao(entityManager);
 	}
 
+	// nodig voor aan de database te kunnen
 	@Override
 	public void destroy() {
 		super.destroy();
@@ -36,6 +38,8 @@ public class SearchBrewersServlet extends HttpServlet {
 			entityManager.close();
 		}
 	}
+
+	//http://localhost:8082/Servlets/SearchBrewers?city=leuven
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
